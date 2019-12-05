@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AR-sunflower</title>
+ <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+<body style="margin : 0px; overflow: hidden;">
+  
+  
+  <a-scene embedded arjs=“sourceType: webcam; debugUIEnabled: false”>
+    <a-assets>
+       <a-asset-item id="formroller-obj" src="https://cdn.glitch.com/af36d36f-4261-42ac-8e21-1af0e2790647%2Fformroller1.obj?v=1573155964108"></a-asset-item>
+        <a-asset-item id="formroller-mtl" src="https://cdn.glitch.com/af36d36f-4261-42ac-8e21-1af0e2790647%2Fformroller1.mtl?v=1573155966892"></a-asset-item>
+        <a-asset-item id="formroller" src="https://cdn.glitch.com/af36d36f-4261-42ac-8e21-1af0e2790647%2Ffoamroller.jpg?v=1573155958735"></a-asset-item>
+      <a-asset-item id="formroller-gltf" src="https://cdn.glitch.com/af36d36f-4261-42ac-8e21-1af0e2790647%2Ffoamroller-ar.gltf?v=1573160301634"></a-asset-item>
+    </a-assets>
+  
+      
+<!--     <a-box color="yellow" position='0 0.5 0' gps-entity-place="latitude: <38.646712>; longitude: <-90.303510>"/> -->
+    <a-marker-camera type="pattern" url="https://cdn.glitch.com/9852db6f-79b5-49c6-9a7a-0f8e7ad5341d%2Fpattern-AR-marker3.patt?v=1574366681369">
+     <a-entity 
+            text="value: FAKENEWS"
+               scale="40 70 1"
+               position="18.5 0 -2 " material="opacity: 1"
+               rotation="-90 0 0"
+               animation="property: position; to: 18.5 0 -4; from: 18.5 0 -1; dur: 1000; dir: alternate; loop: true"
+               >
+               
+        </a-entity>     
+      
+    </a-marker-camera>
+<!--     <a-camera gps-camera rotation-reader></a-camera> -->
+    <a-entity camera>
+  </a-entity>
+  </a-scene>
+</body>
+
+
+</html>
